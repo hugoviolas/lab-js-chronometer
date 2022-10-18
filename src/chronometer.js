@@ -10,10 +10,11 @@ class Chronometer {
         printTimeCallback();
         this.currentTime += 1;
       }, 1000);
+    } else {
+      this.intervalId = setInterval(() => {
+        this.currentTime += 1;
+      }, 1000);
     }
-    this.intervalId = setInterval(() => {
-      this.currentTime += 1;
-    }, 1000);
   }
 
   getMinutes() {
